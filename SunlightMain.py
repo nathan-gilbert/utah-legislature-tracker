@@ -1,9 +1,14 @@
 #Author: Nathan Alan Gilbert
-#Last Modified: Sunday December 11 5:54:05 PM MST 2016
+#Last Modified: Sunday December 11 6:07:22 PM MST 2016
 """ Main class for handling sunlight API calls """
+import argparse
 import sunlight
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-v", "--verbose", action="store_true", help="increase output verbosity")
+    parser.parse_args()
+
     key = ""
     with open(".sunlight.key", 'r') as keyFile:
         key = keyFile.readline().strip()
