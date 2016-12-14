@@ -9,6 +9,7 @@ def grab_current_house_bills():
     """ house bills """
     pass
 
+#TODO
 def grab_current_senate_bills():
     """ senate bills """
     pass
@@ -36,6 +37,5 @@ if __name__ == "__main__":
     #         total_leg += 1
     #         for key in leg:
     #             print(key + " " + str(leg[key]))
-
     # print("-"*50)
     # print("Total Legislators: " + str(total_leg))
