@@ -26,14 +26,5 @@ if __name__ == "__main__":
     ut_legislators = sunlight.openstates.legislators(state='ut')
     ut_bills = sunlight.openstates.bills(state='ut')
 
+    print("UT Legislators: " + str(len(ut_legislators)))
     print("UT Bills: " + str(len(ut_bills)))
-
-    # total_leg = 0
-    # for leg in ut_legs:
-    #     print("-"*50)
-    #     if leg["active"]:
-    #         total_leg += 1
-    #         for key in leg:
-    #             print(key + " " + str(leg[key]))
-    # print("-"*50)
-    # print("Total Legislators: " + str(total_leg))
