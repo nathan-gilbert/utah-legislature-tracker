@@ -26,7 +26,7 @@ if __name__ == "__main__":
     ut_legislators = sunlight.openstates.legislators(state='ut')
     ut_bills = sunlight.openstates.bills(state='ut')
 
-    print(ut_bills)
+    print("UT Bills: " + str(len(ut_bills)))
 
     # total_leg = 0
     # for leg in ut_legs:
