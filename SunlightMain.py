@@ -29,7 +29,6 @@ if __name__ == "__main__":
     ut_bills = sunlight.openstates.bills(state='ut')
 
     print(ut_bills)
-
     # total_leg = 0
     # for leg in ut_legs:
     #     print("-"*50)
