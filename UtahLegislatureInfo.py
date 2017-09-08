@@ -18,7 +18,7 @@ if __name__ == "__main__":
     parser.parse_args()
 
     key = ""
-    with open(".sunlight.key", 'r') as keyFile:
+    with open(".open-states.key", 'r') as keyFile:
         key = keyFile.readline().strip()
 
     sunlight.config.API_KEY = key
@@ -28,3 +28,8 @@ if __name__ == "__main__":
 
     print("UT Legislators: " + str(len(ut_legislators)))
     print("UT Bills: " + str(len(ut_bills)))
+    for bill in ut_bills:
+        print(bill)
+        print(bill["id"])
+        bill_info = sunlight.openstates.bill_detail(state='ut', session='2017', bill_id=bill["bill_id"], chamber=bill['chamber'])
+        print(bill_info)

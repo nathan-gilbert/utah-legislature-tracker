@@ -90,6 +90,7 @@ ENV/
 
 #sunlight
 .sunlight.key
+.open-states.key
 
 #remove vscode directory
 .vscode/
