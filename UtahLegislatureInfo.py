@@ -1,6 +1,7 @@
 """ Main class for handling sunlight API calls """
 import argparse
 import sunlight
+import json
 
 #TODO
 def grab_current_house_bills():
@@ -15,7 +16,12 @@ def grab_current_senate_bills():
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("-v", "--verbose", action="store_true", help="increase output verbosity")
-    parser.parse_args()
+    parser.add_argument("-c", "--config", type=str, help="increase output verbosity", default="config.json")
+    args = parser.parse_args()
+
+    config = None
+    with open(args.config, 'rb') as config_file:
+        config_file = json.load(config_file)
 
     key = ""
     with open(".open-states.key", 'r') as keyFile:
