@@ -3,15 +3,24 @@ import argparse
 import sunlight
 import json
 
-#TODO
-def grab_current_house_bills():
+def current_house_bills():
     """ house bills """
-    pass
+    house_bills = {}
+    for bill in ut_bills:
+        if bill["chamber"] == "lower":
+            bill_info = sunlight.openstates.bill_detail(state='ut', session='2017', bill_id=bill["bill_id"], chamber=bill['chamber'])
+            house_bills[bill["bill_id"]] = bill_info
+    return house_bills
 
-#TODO
-def grab_current_senate_bills():
+def current_senate_bills():
     """ senate bills """
-    pass
+
+    senate_bills = {}
+    for bill in ut_bills:
+        if bill["chamber"] == "upper":
+            bill_info = sunlight.openstates.bill_detail(state='ut', session='2017', bill_id=bill["bill_id"], chamber=bill['chamber'])
+            senate_bills[bill["bill_id"]] = bill_info
+    return senate_bills
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
@@ -34,8 +43,9 @@ if __name__ == "__main__":
 
     print("UT Legislators: " + str(len(ut_legislators)))
     print("UT Bills: " + str(len(ut_bills)))
-    for bill in ut_bills:
+
+    house_bills = current_house_bills()
+    senate_bills = current_senate_bills()
+
+    for bill in house_bills:
         print(bill)
-        print(bill["id"])
-        bill_info = sunlight.openstates.bill_detail(state='ut', session='2017', bill_id=bill["bill_id"], chamber=bill['chamber'])
-        print(bill_info)
