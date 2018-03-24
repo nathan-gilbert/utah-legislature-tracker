@@ -8,8 +8,10 @@ def current_house_bills():
     house_bills = {}
     for bill in ut_bills:
         if bill["chamber"] == "lower":
-            bill_info = sunlight.openstates.bill_detail(state='ut', session='2017', bill_id=bill["bill_id"], chamber=bill['chamber'])
-            house_bills[bill["bill_id"]] = bill_info
+            bill_info = sunlight.openstates.bill_detail(state='ut',
+                    session='2017', bill_id=bill["bill_id"],
+                    chamber=bill['chamber']) house_bills[bill["bill_id"]] =
+                    bill_info
     return house_bills
 
 def current_senate_bills():
@@ -18,14 +20,17 @@ def current_senate_bills():
     senate_bills = {}
     for bill in ut_bills:
         if bill["chamber"] == "upper":
-            bill_info = sunlight.openstates.bill_detail(state='ut', session='2017', bill_id=bill["bill_id"], chamber=bill['chamber'])
-            senate_bills[bill["bill_id"]] = bill_info
+            bill_info = sunlight.openstates.bill_detail(state='ut',
+                    session='2017', bill_id=bill["bill_id"],
+                    chamber=bill['chamber']) senate_bills[bill["bill_id"]] =
+                    bill_info
     return senate_bills
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("-v", "--verbose", action="store_true", help="increase output verbosity")
-    parser.add_argument("-c", "--config", type=str, help="increase output verbosity", default="config.json")
+    parser.add_argument("-v", "--verbose", action="store_true", help="increase
+            output verbosity") parser.add_argument("-c", "--config", type=str,
+            help="increase output verbosity", default="config.json")
     args = parser.parse_args()
 
     config = None
