@@ -69,4 +69,4 @@ if __name__ == "__main__":
     print("Number of Senate Bills: " + str(len(senate_bills)))
     #for bill in house_bills:
     #    print(bill)
-    print("--- {0} seconds ---" % (time.time() - start_time))
+    print("--- {0} seconds ---".format(time.time() - start_time))
