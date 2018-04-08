@@ -10,8 +10,8 @@ Collect and present public information on the actions of the Utah Legislature.
 python3 app.py
 ```
 
+API is hosted at `http://localhost:9090/v1/*`
 Goto `http://localhost:9090/v1/ui` for the swagger docs.
-
 Info on connexion routing: <https://github.com/zalando/connexion>
 
 ## Backend TODO
