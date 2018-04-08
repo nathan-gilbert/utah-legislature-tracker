@@ -1,0 +1,27 @@
+swagger: "2.0"
+
+info:
+  title: "Utah Legislative API"
+  version: "1.0"
+
+basePath: /v1
+
+paths:
+  /bills/:
+    get:
+      responses:
+        '200':
+          description: 'Fetch a list of bills'
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Bill'
+
+definitions:
+  Bill:
+    type: object
+    properties:
+      id:
+        type: integer
+        format: int64
+      name: { type: string }
