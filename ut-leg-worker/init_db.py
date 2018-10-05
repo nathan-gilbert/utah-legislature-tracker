@@ -17,7 +17,14 @@ def create_tables(pgUser):
             house VARCHAR(6) NOT NULL,
             party TEXT NOT NULL
         )
-        """)
+        """,
+        """
+        CREATE TABLE bills (
+            id SERIAL PRIMARY KEY,
+            name TEXT NOT NULL
+        )
+        """
+        )
     conn = None
     try:
         # connect to the PostgreSQL server
