@@ -129,3 +129,6 @@ chrome-user-data
 *.sublime-workspace
 .idea
 *.iml
+
+#local
+.openstates.key
