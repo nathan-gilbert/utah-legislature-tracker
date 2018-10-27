@@ -2,6 +2,8 @@
 
 # look at graphene for graphql querying
 # https://github.com/graphql-python/graphene
+import graphene
+
 # also need the open states api
 # http://docs.openstates.org/en/latest/api/v2/index.html
 from data_worker import DataWorker, WorkerType

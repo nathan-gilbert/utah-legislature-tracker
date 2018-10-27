@@ -2,6 +2,12 @@
 
 Collect and present public information on the actions of the Utah Legislature.
 
+## APIs
+
+* [Open States](http://docs.openstates.org/en/latest/api/v2/index.html)
+* [OpenFEC](https://api.open.fec.gov/developers/)
+* [Ballotpedia](https://ballotpedia.org/API-documentation)
+
 ## ut-leg-worker [Readme](ut-leg-worker/README.md)
 
 A service to collect data using the Open States API v2 on the actions of the
