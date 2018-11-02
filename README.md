@@ -22,3 +22,7 @@ Utah State Legislature.
 * Create background data collection service
 * Create api for background service
 * Create ui for displaying data
+
+## Path to 2.0
+
+* Expand beyond Utah to all the state legislatures in the country.
