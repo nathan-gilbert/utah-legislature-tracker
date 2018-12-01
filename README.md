@@ -22,6 +22,7 @@ Utah State Legislature.
 * Create background data collection service
 * Create api for background service
 * Create ui for displaying data
+* Connect to opensecrets and other data APIs
 
 ## Path to 2.0
 
