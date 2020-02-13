@@ -133,3 +133,4 @@ chrome-user-data
 #local
 .openstates.key
 .datagov.key
+*.sqlite3
