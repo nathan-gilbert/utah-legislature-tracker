@@ -19,11 +19,7 @@ Utah State Legislature.
 
 ## Path to 1.0
 
-* Create background data collection service
-* Create api for background service
+* Create background data collection service with Django
 * Create ui for displaying data
+* Create api for background service
 * Connect to opensecrets and other data APIs
-
-## Path to 2.0
-
-* Expand beyond Utah to all the state legislatures in the country.
