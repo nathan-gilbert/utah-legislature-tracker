@@ -3,10 +3,10 @@ package org.mediumcool.person.domain
 import com.nhaarman.mockitokotlin2.any
 import com.nhaarman.mockitokotlin2.verify
 import com.nhaarman.mockitokotlin2.whenever
-import demo.person.data.Person
-import demo.person.data.PersonMaster
-import demo.person.data.PersonMasterRepository
-import demo.person.data.PersonRepository
+import org.mediumcool.person.data.Person
+import org.mediumcool.person.data.PersonMaster
+import org.mediumcool.person.data.PersonMasterRepository
+import org.mediumcool.person.data.PersonRepository
 import org.hamcrest.CoreMatchers.equalTo
 import org.hamcrest.CoreMatchers.nullValue
 import org.hamcrest.MatcherAssert.assertThat

@@ -1,8 +1,8 @@
 package org.mediumcool.person.controller
 
 import com.fasterxml.jackson.databind.ObjectMapper
-import demo.person.data.Person
-import demo.person.data.PersonRepository
+import org.mediumcool.person.data.Person
+import org.mediumcool.person.data.PersonRepository
 import org.hamcrest.CoreMatchers.equalTo
 import org.hamcrest.MatcherAssert.assertThat
 import org.json.JSONObject
