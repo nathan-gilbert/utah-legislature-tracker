@@ -1,0 +1,13 @@
+server:
+  port: 9000
+  servlet.contextPath: /api
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/demo_test
+    hikari.maximum-pool-size: 2
+  main.banner-mode: "off"
+
+logging:
+  level:
+    root: ERROR
