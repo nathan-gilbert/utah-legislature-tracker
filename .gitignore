@@ -64,3 +64,4 @@ hs_err_pid*
 .datagov.key
 *.sqlite3
 .vscode
+application-local.yml
