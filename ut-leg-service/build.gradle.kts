@@ -129,8 +129,8 @@ tasks {
 /*
 Read the open states API Key from `.openstates.key`
  */
-val creds = File(".openstates.key").bufferedReader().readLines()
-val openStatesKey = creds[0]
+val credentials = File(".openstates.key").bufferedReader().readLines()
+val openStatesKey = credentials[0]
 
 graphql {
   client {
