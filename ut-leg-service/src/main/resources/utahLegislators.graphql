@@ -1,4 +1,4 @@
-{
+query UtahLegislators {
   jurisdiction(name: "Utah") {
     name
     url
