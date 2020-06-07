@@ -1,6 +1,4 @@
 #remove vscode directory
-.vscode/
-
 #javascript
 node_modules
 ncp-debug.log
@@ -9,7 +7,6 @@ bower_component
 src/config/configSec.js
 
 .DS_STORE
-node_modules
 *~
 *.pyc
 static
@@ -36,11 +33,6 @@ chrome-user-data
 .idea
 *.iml
 
-#local
-.openstates.key
-.datagov.key
-*.sqlite3
-
 # Java/Kotlin
 # Compiled class file
 *.class
@@ -66,3 +58,9 @@ chrome-user-data
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 .gradle
+
+# credentials and misc
+.openstates.key
+.datagov.key
+*.sqlite3
+.vscode
