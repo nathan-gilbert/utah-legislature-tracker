@@ -1,0 +1,42 @@
+query UtahSenateMembers {
+      people(memberOf:"ocd-organization/98cb21d7-f3ae-416b-93e7-df3da962aff9", first: 100) {
+        edges {
+          node {
+            id
+            name
+            party: currentMemberships(classification:"party") {
+              post {
+                id
+                label
+                startDate
+                endDate
+                role
+              }
+              organization {
+                id
+                name
+              }
+            }
+            links {
+              url
+            }
+            sources {
+              url
+            }
+            chamber: currentMemberships(classification:["upper", "lower"]) {
+              post {
+                id
+                label
+                startDate
+                endDate
+                role
+              }
+              organization {
+                id
+                name
+              }
+            }
+          }
+        }
+      }
+    }

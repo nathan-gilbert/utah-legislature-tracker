@@ -1,0 +1,42 @@
+query UtahHouseMembers {
+      people(memberOf:"ocd-organization/c7625e7e-dc12-49cf-aa73-fa96c5bf4b11", first: 100) {
+        edges {
+          node {
+            id
+            name
+            party: currentMemberships(classification:"party") {
+              post {
+                id
+                label
+                startDate
+                endDate
+                role
+              }
+              organization {
+                id
+                name
+              }
+            }
+            links {
+              url
+            }
+            sources {
+              url
+            }
+            chamber: currentMemberships(classification:["upper", "lower"]) {
+              post {
+                id
+                label
+                startDate
+                endDate
+                role
+              }
+              organization {
+                id
+                name
+              }
+            }
+          }
+        }
+      }
+    }

@@ -4,14 +4,14 @@ import io.ktor.util.KtorExperimentalAPI
 import kotlinx.coroutines.runBlocking
 import org.mediumcool.integrations.common.OpenStatesService
 import org.mediumcool.person.domain.PersonDto
-import org.mediumcool.graphql.generated.UtahLegislators
+import org.mediumcool.graphql.generated.UtahGovernment
 import org.springframework.stereotype.Service
 
 @Service
 class OpenStatesPersonAPIImpl: OpenStatesPersonAPI, OpenStatesService() {
   @KtorExperimentalAPI
   override fun getByBody(body: String): List<PersonDto> {
-    val utahLegislators = UtahLegislators(client)
+    val utahLegislators = UtahGovernment(client)
     val orgNames = mutableListOf<PersonDto>()
     runBlocking {
       val results = utahLegislators.execute()

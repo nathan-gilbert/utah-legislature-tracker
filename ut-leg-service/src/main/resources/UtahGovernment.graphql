@@ -1,0 +1,15 @@
+query UtahGovernment {
+    jurisdiction(name: "Utah") {
+        name
+        url
+        organizations(first: 100) {
+            edges {
+                node {
+                  id
+                  name
+                  classification
+                }
+           }
+       }
+    }
+}

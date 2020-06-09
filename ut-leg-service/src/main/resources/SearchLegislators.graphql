@@ -1,0 +1,21 @@
+query SearchLegislators($id: String) {
+  person(id: $id) {
+    name
+    contactDetails {
+      note
+      type
+      value
+    }
+    otherNames {
+      name
+    }
+    sources {
+      url
+    }
+    currentMemberships {
+      organization {
+        name
+      }
+    }
+  }
+}
