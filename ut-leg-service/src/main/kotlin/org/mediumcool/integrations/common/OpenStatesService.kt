@@ -21,10 +21,8 @@ open class OpenStatesService {
     engine {
       config {
         addInterceptor {
-          val request: Request = it.request()
-          val newRequest: Request
-
-          newRequest = request.newBuilder()
+          val newRequest = it.request()
+              .newBuilder()
               .addHeader("X-API-KEY", openStatesKey)
               .build()
           it.proceed(newRequest)

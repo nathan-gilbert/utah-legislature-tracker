@@ -14,10 +14,10 @@ data class PersonResponse(val name: List<PersonDto>)
 @RestController
 @RequestMapping("/person")
 class PersonController @Autowired constructor(private val openStatesPersonAPI: OpenStatesPersonAPI) {
-  @GetMapping()
+  @GetMapping
   @ResponseStatus(HttpStatus.OK)
   fun getPersons(): PersonResponse {
-    val persons = openStatesPersonAPI.getByBody("house")
+    val persons = openStatesPersonAPI.getHouseMembers()
     return PersonResponse(persons)
   }
 }
